@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+  
+  <groupId>com.beanie</groupId>
+  <artifactId>imagechooser</artifactId>
+  <version>1.2.6-SNAPSHOT</version>
+  <url>https://github.com/coomar2841/image-chooser-library</url>
+  <name>Image-Chooser-Library</name>
+  <description>An Easy Image/Video Chooser Library for your Android Apps</description>
+  
+  <properties>
+	<android-maven-plugin.version>3.6.0</android-maven-plugin.version>
+	<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>      
+  </properties>
+  
+  <issueManagement>
+    <url>https://github.com/coomar2841/image-chooser-library/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>  
+  
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <scm>
+    <url>https://github.com/coomar2841/image-chooser-library</url>
+    <connection>scm:git:git://github.com/coomar2841/image-chooser-library.git</connection>
+    <developerConnection>scm:git:git@github.com:coomar2841/image-chooser-library.git</developerConnection>
+  </scm>  
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>support-v4</artifactId>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+	<build>
+    	<sourceDirectory>src</sourceDirectory>	    
+		<plugins>
+		    <plugin>
+        	    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+        		<artifactId>android-maven-plugin</artifactId>
+        		<version>${android-maven-plugin.version}</version>
+        		<extensions>true</extensions>
+      		</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
